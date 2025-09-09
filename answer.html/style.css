@@ -1,0 +1,89 @@
+/* styles.css - BlissBroom */
+
+/* ========== General Styling ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #2ecc71;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ========== Part 1: Transitions & Keyframes ========== */
+
+/* Button with transition */
+.hover-btn {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-btn:hover {
+  background-color: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* Fade-in animation */
+.fade-box {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========== Part 3: JS-Triggered Broom Animation ========== */
+
+.broom-icon {
+  width: 100px;
+  height: 100px;
+  background: url('https://i.imgur.com/fcU8c1G.png') no-repeat center;
+  background-size: contain;
+  margin: 20px auto;
+}
+
+/* Sweeping animation */
+@keyframes sweep {
+  0%, 100% { transform: rotate(0); }
+  50% { transform: rotate(-20deg); }
+}
+
+.sweep {
+  animation: sweep 0.8s ease;
+}
+
+/* Output styles */
+#score-output, #scope-output {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #34495e;
+}
